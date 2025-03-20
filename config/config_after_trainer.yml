@@ -42,8 +42,8 @@ optimizer:
 predictor:
   beamsearch: false
 
-# pretrain: /kaggle/input/aaaaa/other/default/1/pretrain/vgg_transformer.pth
-pretrain: null
+pretrain: /kaggle/input/aaaaa/other/default/1/pretrain/vgg_transformer.pth
+# pretrain: null
 quiet: false
 
 seq_modeling: transformer
