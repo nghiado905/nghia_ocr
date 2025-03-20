@@ -1,9 +1,9 @@
 # change to list chars of your dataset or use default vietnamese chars
 vocab: 'aAàÀảẢãÃáÁạẠăĂằẰẳẲẵẴắẮặẶâÂầẦẩẨẫẪấẤậẬbBcCdDđĐeEèÈẻẺẽẼéÉẹẸêÊềỀểỂễỄếẾệỆfFgGhHiIìÌỉỈĩĨíÍịỊjJkKlLmMnNoOòÒỏỎõÕóÓọỌôÔồỒổỔỗỖốỐộỘơƠờỜởỞỡỠớỚợỢpPqQrRsStTuUùÙủỦũŨúÚụỤưƯừỪửỬữỮứỨựỰvVwWxXyYỳỲỷỶỹỸýÝỵỴzZ0123456789!"#$%&''()*+,-./:;<=>?@[\]^_`{|}~ '
 
-# cpu, cuda, cuda:0
-device: cuda:0
+device: 'cuda:0'
 pretrain: /kaggle/input/aaaaa/other/default/1/pretrain/vgg_transformer.pth
+
 seq_modeling: transformer
 transformer:  
     d_model: 256

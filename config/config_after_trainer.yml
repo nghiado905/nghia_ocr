@@ -52,7 +52,7 @@ optimizer:
 predictor:
   beamsearch: false
 
-pretrain: /kaggle/input/aaaaa/other/default/1/pretrain/vgg_transformer.pth
+pretrain: https://vocr.vn/data/vietocr/vgg_transformer.pth
 quiet: false
 
 seq_modeling: transformer
@@ -78,4 +78,4 @@ transformer:
   trans_dropout: 0.1
 
 vocab: 'aAàÀảẢãÃáÁạẠăĂằẰẳẲẵẴắẮặẶâÂầẦẩẨẫẪấẤậẬbBcCdDđĐeEèÈẻẺẽẼéÉẹẸêÊềỀểỂễỄếẾệỆfFgGhHiIìÌỉỈĩĨíÍịỊjJkKlLmMnNoOòÒỏỎõÕóÓọỌôÔồỒổỔỗỖốỐộỘơƠờỜởỞỡỠớỚợỢpPqQrRsStTuUùÙủỦũŨúÚụỤưƯừỪửỬữỮứỨựỰvVwWxXyYỳỲỷỶỹỸýÝỵỴzZ0123456789!"#$%&''()*+,-./:;<=>?@[\]^_`{|}~÷≥Φ± '
-weights: null
+weights: https://vocr.vn/data/vietocr/vgg_transformer.pth
