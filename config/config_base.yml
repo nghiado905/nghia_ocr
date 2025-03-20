@@ -3,7 +3,7 @@ vocab: 'aAàÀảẢãÃáÁạẠăĂằẰẳẲẵẴắẮặẶâÂầẦ�
 
 device: 'cuda:0'
 pretrain: https://vocr.vn/data/vietocr/vgg_transformer.pth
-
+weights: https://vocr.vn/data/vietocr/vgg_transformer.pth
 seq_modeling: transformer
 transformer:  
     d_model: 256
@@ -62,6 +62,7 @@ trainer:
 dataset:    
     # name of your dataset
     # path to annotation and image
+    name: 'hw'
     data_root: ./train_data/old_images/
     train_annotation: rec_gt_train.txt
     valid_annotation: rec_gt_test.txt
