@@ -49,8 +49,8 @@ optimizer:
 
 trainer:
     batch_size: 32
-    print_every: 200
-    valid_every: 4000
+    print_every: 50
+    valid_every: 50
     iters: 100000
     # where to save our model for prediction
     export: ./output_model/vgg_transformer.pth
