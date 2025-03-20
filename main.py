@@ -88,7 +88,14 @@ cfg = Cfg.load_config_from_file('./config/config_after_trainer.yml')
 cfg['weights'] = '/kaggle/input/aaaaa/other/default/1/pretrain/vgg_transformer.pth'
 cfg['cnn']['pretrained'] = True
 cfg['device'] = 'cuda'
+print(cfg['vocab'])
+print(len(cfg['vocab']))
+
 predictor = Predictor(cfg)
+weights_path = "/kaggle/input/aaaaa/other/default/1/pretrain/vgg_transformer.pth"
+checkpoint = torch.load(weights_path, map_location="cpu")
+print(checkpoint.keys())  # Liệt kê các tham số trong checkpoint
+print(checkpoint['transformer.embed_tgt.weight'].shape)  # Kiểm tra kích thước của lớp embed
 
 # Áp dụng OCR để nhận diện văn bản trong các ô của bảng
 cell_coordinates = get_cell_coordinates_by_row(cells)

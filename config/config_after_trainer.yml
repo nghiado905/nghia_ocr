@@ -36,14 +36,14 @@ dataset:
 device: cuda:0
 
 optimizer:
-  max_lr: 0.0003
+  max_lr: 0.001
   pct_start: 0.1
 
 predictor:
   beamsearch: false
 
-pretrain: /kaggle/input/aaaaa/other/default/1/pretrain/vgg_transformer.pth
-# pretrain: null
+# pretrain: /kaggle/input/aaaaa/other/default/1/pretrain/vgg_transformer.pth
+pretrain: null
 quiet: false
 
 seq_modeling: transformer
@@ -51,12 +51,12 @@ seq_modeling: transformer
 trainer:
   batch_size: 16
   checkpoint: ./checkpoint/transformerocr_checkpoint.pth
-  export: /kaggle/input/aaaaa/other/default/1/pretrain/vgg_transformer.pth
-  iters: 700
+  export: ./output_model/vgg_transformer.pth
+  iters: 20000
   log: ./train.log
   metrics: 10000
   print_every: 200
-  valid_every: 3000
+  valid_every: 100
 
 transformer:
   d_model: 256
