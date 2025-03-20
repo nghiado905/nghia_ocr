@@ -42,7 +42,7 @@ optimizer:
 predictor:
   beamsearch: false
 
-pretrain: ./pretrain/vgg_transformer.pth
+pretrain: /kaggle/input/aaaaa/other/default/1/pretrain/vgg_transformer.pth
 # pretrain: null
 quiet: false
 
@@ -51,7 +51,7 @@ seq_modeling: transformer
 trainer:
   batch_size: 32
   checkpoint: ./checkpoint/transformerocr_checkpoint.pth
-  export: ./pretrain/vgg_transformer.pth
+  export: /kaggle/input/aaaaa/other/default/1/pretrain/vgg_transformer.pth
   iters: 700
   log: ./train.log
   metrics: 10000
