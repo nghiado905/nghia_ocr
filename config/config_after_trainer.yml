@@ -5,20 +5,30 @@ aug:
 backbone: vgg19_bn
 
 cnn:
-  hidden: 512
+  hidden: 256
   ks:
-    - [2, 2]
-    - [2, 2]
-    - [2, 1]
-    - [2, 1]
-    - [1, 1]
+  - - 2
+    - 2
+  - - 2
+    - 2
+  - - 2
+    - 1
+  - - 2
+    - 1
+  - - 1
+    - 1
   pretrained: true
   ss:
-    - [2, 2]
-    - [2, 2]
-    - [2, 1]
-    - [2, 1]
-    - [1, 1]
+  - - 2
+    - 2
+  - - 2
+    - 2
+  - - 2
+    - 1
+  - - 2
+    - 1
+  - - 1
+    - 1
 
 dataloader:
   num_workers: 1
@@ -69,4 +79,4 @@ transformer:
   trans_dropout: 0.1
 
 vocab: 'aAàÀảẢãÃáÁạẠăĂằẰẳẲẵẴắẮặẶâÂầẦẩẨẫẪấẤậẬbBcCdDđĐeEèÈẻẺẽẼéÉẹẸêÊềỀểỂễỄếẾệỆfFgGhHiIìÌỉỈĩĨíÍịỊjJkKlLmMnNoOòÒỏỎõÕóÓọỌôÔồỒổỔỗỖốỐộỘơƠờỜởỞỡỠớỚợỢpPqQrRsStTuUùÙủỦũŨúÚụỤưƯừỪửỬữỮứỨựỰvVwWxXyYỳỲỷỶỹỸýÝỵỴzZ0123456789!"#$%&''()*+,-./:;<=>?@[\]^_`{|}~÷≥Φ±     '
-weights: /kaggle/input/aaaaa/other/default/1/pretrain/vgg_transformer.pth
+weights: null
