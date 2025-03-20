@@ -17,6 +17,32 @@ transformer:
 
 backbone: vgg19_bn
 
+cnn:
+  hidden: 256
+  ks:
+  - - 2
+    - 2
+  - - 2
+    - 2
+  - - 2
+    - 1
+  - - 2
+    - 1
+  - - 1
+    - 1
+  pretrained: true
+  ss:
+  - - 2
+    - 2
+  - - 2
+    - 2
+  - - 2
+    - 1
+  - - 2
+    - 1
+  - - 1
+    - 1
+
 optimizer:
     max_lr: 0.0003 
     pct_start: 0.1
