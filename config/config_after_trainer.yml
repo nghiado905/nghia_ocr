@@ -5,7 +5,7 @@ aug:
 backbone: vgg19_bn
 
 cnn:
-  hidden: 256
+  hidden: 512
   ks:
     - [2, 2]
     - [2, 2]
@@ -21,7 +21,7 @@ cnn:
     - [1, 1]
 
 dataloader:
-  num_workers: 3
+  num_workers: 1
   pin_memory: true
 
 dataset:
@@ -36,7 +36,7 @@ dataset:
 device: cuda:0
 
 optimizer:
-  max_lr: 0.001
+  max_lr: 0.0005
   pct_start: 0.1
 
 predictor:
@@ -46,15 +46,15 @@ pretrain: /kaggle/input/aaaaa/other/default/1/pretrain/vgg_transformer.pth
 # pretrain: null
 quiet: false
 
-seq_modeling: transformer
+seq_modeling: seq2seq
 
 trainer:
-  batch_size: 16
+  batch_size: 32
   checkpoint: ./checkpoint/transformerocr_checkpoint.pth
   export: ./output_model/vgg_transformer.pth
   iters: 20000
   log: ./train.log
-  metrics: 100
+  metrics: 50
   print_every: 200
   valid_every: 100
 
@@ -65,8 +65,8 @@ transformer:
   nhead: 8
   num_decoder_layers: 6
   num_encoder_layers: 6
-  pos_dropout: 0.1
-  trans_dropout: 0.1
+  pos_dropout: 0.2
+  trans_dropout: 0.2
 
 vocab: 'aAàÀảẢãÃáÁạẠăĂằẰẳẲẵẴắẮặẶâÂầẦẩẨẫẪấẤậẬbBcCdDđĐeEèÈẻẺẽẼéÉẹẸêÊềỀểỂễỄếẾệỆfFgGhHiIìÌỉỈĩĨíÍịỊjJkKlLmMnNoOòÒỏỎõÕóÓọỌôÔồỒổỔỗỖốỐộỘơƠờỜởỞỡỠớỚợỢpPqQrRsStTuUùÙủỦũŨúÚụỤưƯừỪửỬữỮứỨựỰvVwWxXyYỳỲỷỶỹỸýÝỵỴzZ0123456789!"#$%&''()*+,-./:;<=>?@[\]^_`{|}~÷≥Φ± '
-weights: null
+weights: /kaggle/input/aaaaa/other/default/1/pretrain/vgg_transformer.pth
